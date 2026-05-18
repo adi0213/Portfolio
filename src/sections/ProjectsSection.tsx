@@ -65,10 +65,10 @@ export default function ProjectsSection() {
           opacity: 0,
           duration: 1,
           ease: 'power4.out',
+          delay: i * 0.05,
           scrollTrigger: {
             trigger: card,
             start: 'top 85%',
-            delay: i * 0.05,
           }
         });
 
@@ -111,7 +111,7 @@ export default function ProjectsSection() {
         {projects.map((project, i) => (
           <div
             key={project.id}
-            ref={(el) => (cardsRef.current[i] = el)}
+            ref={(el) => { cardsRef.current[i] = el; }}
             className="group relative overflow-hidden rounded-3xl"
             style={{ aspectRatio: '16/10', cursor: 'none' }}
           >

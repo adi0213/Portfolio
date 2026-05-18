@@ -64,7 +64,7 @@ export default function WorkflowSection() {
 
         {/* Stage list */}
         <div ref={listRef} className="flex flex-col">
-          {stages.map((stage, i) => (
+          {stages.map((stage) => (
             <div
               key={stage.num}
               className="stage-item group border-t border-[rgba(242,235,224,0.06)] py-8 relative cursor-none"
